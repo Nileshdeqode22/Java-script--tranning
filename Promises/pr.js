@@ -1,7 +1,9 @@
 /*Promises are the ideal choice for handling asynchronous operations in the simplest manner. 
 They can handle multiple asynchronous operations easily and provide better error handling than callbacks and events.
  In other words also, we may say that, 
- promises are the ideal choice for handling multiple callbacks at the same time, thus avoiding the undesired callback hell situation. Promises do provide a better chance to a user to read the code in a more effective and efficient manner especially it that particular code is used for implementing multiple asynchronous operations. 
+ promises are the ideal choice for handling multiple callbacks at the same time, thus avoiding the undesired callback hell situation. 
+ Promises do provide a better chance to a user to read the code in a more effective and efficient manner especially 
+ it that particular code is used for implementing multiple asynchronous operations. 
 
 Benefits of Promises 
 Improves Code Readability
@@ -23,33 +25,15 @@ var promise = new Promise(function(resolve, reject){
 
 */
 
+
 /*Parameters 
 Promise constructor takes only one argument which is a callback function (and that callback function is also referred as anonymous function too).
 Callback function takes two arguments, resolve and reject
 Perform operations inside the callback function and if everything went well then call resolve.
 If desired operations do not go well then call reject.
-*/
-
-var promise = new Promise(function(resolve, reject) {
-    const x = "Js";
-    const y = "Go"
-    if(x === y) {
-        resolve();
-    } else {
-        reject();
-    }
-    });
-    
-    promise.
-        then(function () {
-            console.log('Success, You are a Js');
-        }).
-        catch(function () {
-            console.log('Some error has occurred');
-        });
 
 
-/*Promise Consumers
+Promise Consumers
 Promises can be consumed by registering functions using .then and .catch methods.
 
 1. then() 
@@ -73,7 +57,7 @@ Syntax:
 */    
 
 
-var promise = new Promise(function(resolve, reject) {
+ promise = new Promise(function(resolve, reject) {
 	resolve('JavaScript');
 })
 
@@ -90,12 +74,14 @@ promise
     /*
     2. catch() 
 
-catch() is invoked when a promise is either rejected or some error has occurred in execution. It is used as an Error Handler whenever at any step there is a chance of getting an error.
+catch() is invoked when a promise is either rejected or some error has occurred in execution. 
+It is used as an Error Handler whenever at any step there is a chance of getting an error.
 
 Parameters: 
 catch() method takes one function as parameter. 
 
-Function to handle errors or promise rejections.(.catch() method internally calls .then(null, errorHandler), i.e. .catch() is just a shorthand for .then(null, errorHandler) )
+Function to handle errors or promise rejections.(.catch() method internally calls .then(null, errorHandler), 
+i.e. .catch() is just a shorthand for .then(null, errorHandler) )
 Syntax:
 
 .catch(function(error){
@@ -103,7 +89,7 @@ Syntax:
     })
     */
 
-    var promise = new Promise(function(resolve, reject) {
+    promise = new Promise(function(resolve, reject) {
         reject('Promise Rejected')
     })
     
@@ -118,7 +104,7 @@ Syntax:
 
 //Prmoise rejected
 
-var promise = new Promise(function(resolve, reject) {
+ promise = new Promise(function(resolve, reject) {
 	throw new Error('Some error has occurred')
 })
 

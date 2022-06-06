@@ -57,3 +57,16 @@ console.log(person3.name); // Jack
 // changing the value of name property
 person3.personName = 'Sarah';
 console.log(person3.name); // Sarah
+
+/*An Immediately-invoked Function Expression is a way to execute functions immediately, as soon as they are created. 
+IIFEs are very useful because they don't pollute the global object, and they are a simple way to isolate variables declarations
+An Immediately-invoked Function Expression (IIFE for friends) is a way to execute functions immediately, as soon as they are created.
+
+IIFEs are very useful because they don’t pollute the global object, and they are a simple way to isolate variables declarations.
+*/
+
+//synatx 
+
+(function() {
+    /* */
+  })()

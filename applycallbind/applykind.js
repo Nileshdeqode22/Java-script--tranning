@@ -8,14 +8,15 @@ var pokemon = {
     }
 };
 
-var pokemonName = function(snack, hobby) {
+ pokemonName = function(snack, hobby) {
     console.log(this.getPokeName() + 'I choose you!');
     console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
 };
 
-var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
+let logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
 
 logPokemon('sushi', 'algorithms'); // 'Pika Chu I choose you!'
+
 
 //Call(),Apply()
 
@@ -47,4 +48,10 @@ var pokemonName = function(snack, hobby) {
 
 pokemonName.call(pokemon,'sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
 pokemonName.apply(pokemon,['sushi', 'algorithms']); // Pika Chu  loves sushi and algorithms
+
+let name1= pokemonName.call(pokemon,'sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
+
+
+
+
 
